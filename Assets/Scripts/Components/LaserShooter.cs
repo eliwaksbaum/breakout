@@ -10,22 +10,25 @@ public class LaserShooter : MonoBehaviour
     public GameEvent lose;
     public GameEvent serveCall;
 
-    public IEnumerator coroutine;
+    public IEnumerator fireRoutine;
+    bool shooting;
 
     void Start()
     {
-        coroutine = ShootLasers();
+        fireRoutine = ShootLasers();
     }
 
     public IEnumerator ShootLasers()
     {
         float elapsed = 0;
+        shooting = true;
         while (elapsed < totalTime)
         {
             Fire();
             elapsed += waitTime;
             yield return new WaitForSeconds(waitTime);
         }
+        shooting = false;
     }
 
     void Fire()
@@ -35,7 +38,10 @@ public class LaserShooter : MonoBehaviour
 
     void Stop()
     {
-        StopCoroutine(coroutine);
+        if (shooting)
+        {
+            StopCoroutine(fireRoutine);
+        }
     }
 
     void OnEnable()
