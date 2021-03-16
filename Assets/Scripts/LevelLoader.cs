@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
@@ -10,7 +11,7 @@ public class LevelLoader : MonoBehaviour
     //YOOOOO, NUMBER OF LEVELS HERE
     static int maxLevel = 3;
 
-    public static async void Load(int index)
+    public static void Load(int index)
     {
         Unload();
         string address = "Levels/" + index.ToString();
@@ -20,9 +21,15 @@ public class LevelLoader : MonoBehaviour
         }
         else
         {
-            currentLevel = await Addressables.InstantiateAsync(address).Task;
+            AsyncOperationHandle<GameObject> handle = Addressables.InstantiateAsync(address);
+            handle.Completed += SetCurrent;
         }
         currentIndex = index;
+    }
+
+    public static void SetCurrent(AsyncOperationHandle<GameObject> handle)
+    {
+        currentLevel = handle.Result;
     }
 
     public static void LoadNext()
