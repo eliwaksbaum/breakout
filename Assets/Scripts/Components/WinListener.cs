@@ -5,14 +5,15 @@ public class WinListener : MonoBehaviour
     public GameEvent win;
     int brickCount;
 
-    void Start()
-    {
-        brickCount = GetComponentsInChildren<BrickHit>().Length;
-    }
+    // void Start()
+    // {
+    //     brickCount = GetComponentsInChildren<BrickHit>().Length;
+    // }
     
     void CheckWin()
     {
-        brickCount -= 1;
+        brickCount = GetComponentsInChildren<BrickHit>().Length - 1;
+        //brickCount -= 1;
         if (brickCount == 0)
         {
             win.Call();
