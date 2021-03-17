@@ -15,7 +15,7 @@ public class StopOnLevelEnd : MonoBehaviour
 
     void Stop()
     {
-        rigidbody.velocity = Vector2.zero;
+        rigidbody.simulated = false;
     }
 
     void OnEnable()
