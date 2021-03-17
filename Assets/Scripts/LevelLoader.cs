@@ -9,7 +9,7 @@ public class LevelLoader : MonoBehaviour
     public static GameObject CurrentLevel {get{return currentLevel;}}
     static int currentIndex;
     //YOOOOO, NUMBER OF LEVELS HERE
-    static int maxLevel = 3;
+    static int maxLevel = 4;
 
     public static void Load(int index)
     {

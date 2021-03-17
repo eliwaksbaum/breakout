@@ -54,6 +54,7 @@ public class PaddleDisplayer : MonoBehaviour
 
     void Update()
     {
+        //Ever heard of MonoBehaviour.OnMouseDown??????
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mouse3 = Camera.main.ScreenToWorldPoint(Input.mousePosition);

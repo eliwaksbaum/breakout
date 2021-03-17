@@ -27,14 +27,11 @@ public class PowerSpawner : MonoBehaviour
 
     IEnumerator RollForSpawn()
     {
-        Debug.Log("hello?");
-        Debug.Log(rolling);
         while(rolling)
         {
             if (Random.value < dropChancePerInterval)
             {
                 Spawn();
-                Debug.Log("spawn");
             }
             yield return new WaitForSeconds(interval);
         }
