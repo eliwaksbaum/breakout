@@ -26,11 +26,15 @@ public class Power : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Paddle")
+        Paddle paddle = collider.GetComponent<Paddle>();
+        if (paddle != null)
         {
-            Sounds.PlayAudio(powerUp);
-            DoPower(collider.gameObject);
-            Destroy(gameObject);
+            if (paddle.Active)
+            {
+                Sounds.PlayAudio(powerUp);
+                DoPower(collider.gameObject);
+                Destroy(gameObject);
+            }
         }
     }
 

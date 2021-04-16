@@ -9,6 +9,7 @@ public class Paddle : MonoBehaviour
     
     bool movable;
     bool serving;
+    public bool Active {get {return movable;}}
 
     public SpriteValue paddleSprite;
     public GameEvent win;
