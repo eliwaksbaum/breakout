@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8089926164725817379}
   - component: {fileID: 3111518479387363728}
   - component: {fileID: 7317068546287887983}
+  - component: {fileID: -1110217166897824975}
   m_Layer: 10
   m_Name: Ball
   m_TagString: Ball
@@ -248,6 +249,8 @@ MonoBehaviour:
   health: {fileID: 11400000, guid: 13ed49c62cf710347add4cd026342c62, type: 2}
   serveCall: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}
   lose: {fileID: 11400000, guid: 34a9f0d486abaf5428d90a099aa04ce5, type: 2}
+  loseLifeClip: {fileID: 8300000, guid: 3be13acc623a5354fb6e529dfbe8f5fd, type: 3}
+  loseGameClip: {fileID: 8300000, guid: b88b86b5099c8d842887f0f60dcbfd97, type: 3}
 --- !u!114 &3111518479387363728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +280,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   win: {fileID: 11400000, guid: 2f127df29469fcf42828c9576a34ed0b, type: 2}
   lose: {fileID: 11400000, guid: 34a9f0d486abaf5428d90a099aa04ce5, type: 2}
+--- !u!114 &-1110217166897824975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6655750006419460262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e139b3609a48ee4ab7d9b1db63b2305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitClip: {fileID: 8300000, guid: 59be0f33e8e249e4a8bee4c89aeeec67, type: 3}
 --- !u!1 &9189794773631922096
 GameObject:
   m_ObjectHideFlags: 0

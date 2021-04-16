@@ -4,6 +4,7 @@ public class Power : MonoBehaviour
 {
     public FloatValue powerSpeed;
     public GameEvent serveCall;
+    public AudioClip powerUp;
 
     Vector3 stageBounds;
     Rigidbody2D rb;
@@ -27,6 +28,7 @@ public class Power : MonoBehaviour
     {
         if (collider.tag == "Paddle")
         {
+            Sounds.PlayAudio(powerUp);
             DoPower(collider.gameObject);
             Destroy(gameObject);
         }

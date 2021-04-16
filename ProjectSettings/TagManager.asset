@@ -9,6 +9,8 @@ TagManager:
   - Brick
   - Button
   - Laser
+  - Wall
+  - Block
   layers:
   - Default
   - TransparentFX

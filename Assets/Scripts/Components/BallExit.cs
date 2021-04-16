@@ -8,7 +8,15 @@ public class BallExit : MonoBehaviour
     public GameEvent serveCall;
     public GameEvent lose;
 
-    // Start is called before the first frame update
+    public AudioClip loseLifeClip;
+    public AudioClip loseGameClip;
+    AudioSource loseLifeAudio;
+
+    void Awake()
+    {
+        loseLifeAudio = Sounds.AddAudio(gameObject, loseLifeClip);
+    }
+
     void Start()
     {
         stageBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
@@ -19,9 +27,11 @@ public class BallExit : MonoBehaviour
     {
        if(transform.position.y < -stageBounds.y - .5f)
        {
+           loseLifeAudio.Play();
            health.addValue(-1);
            if (health.Value <= 0)
            {
+               Sounds.PlayAudio(loseGameClip);
                lose.Call();
                Destroy(this.gameObject);
                return;

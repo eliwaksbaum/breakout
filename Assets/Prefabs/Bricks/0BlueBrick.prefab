@@ -99,6 +99,9 @@ MonoBehaviour:
   brickColor: 0
   brickData: {fileID: 11400000, guid: ab12ab835e6bef546944a4201f308562, type: 2}
   score: {fileID: 11400000, guid: e6e41ae711510314ba63e3611bcd7e00, type: 2}
+  hit1Clip: {fileID: 8300000, guid: 37857eee20068d54db53ccd476781373, type: 3}
+  hit2Clip: {fileID: 8300000, guid: a2658a612ce1bac49bc24574bc15be44, type: 3}
+  dieClip: {fileID: 8300000, guid: 15c93001a12c414418207cfcde1b26e8, type: 3}
 --- !u!61 &-7141448286875441581
 BoxCollider2D:
   m_ObjectHideFlags: 0

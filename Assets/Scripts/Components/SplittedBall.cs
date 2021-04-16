@@ -8,7 +8,7 @@ public class SplittedBall : MonoBehaviour
 
     bool takeOver = false;
     Vector3 stageBounds;
-    public BallSpliter paddle;
+    public BallSplitter paddle;
 
     static List<SplittedBall> alives = new List<SplittedBall>();
 

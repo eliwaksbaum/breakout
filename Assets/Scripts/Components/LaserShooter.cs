@@ -13,6 +13,14 @@ public class LaserShooter : MonoBehaviour
     public IEnumerator fireRoutine;
     bool shooting;
 
+    public AudioClip pewClip;
+    AudioSource pewAudio;
+
+    void Awake()
+    {
+        pewAudio = Sounds.AddAudio(gameObject, pewClip);
+    }
+
     void Start()
     {
         fireRoutine = ShootLasers();
@@ -33,6 +41,7 @@ public class LaserShooter : MonoBehaviour
 
     void Fire()
     {
+        pewAudio.Play();
         Instantiate(laserPair, transform.position + new Vector3(0, .5f, 0), Quaternion.identity, LevelLoader.CurrentLevel.transform);
     }
 

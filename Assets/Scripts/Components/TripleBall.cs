@@ -4,7 +4,7 @@ public class TripleBall : Power
 {
     protected override void DoPower(GameObject paddle)
     {
-        BallSpliter splitter = paddle.GetComponent<BallSpliter>();
+        BallSplitter splitter = paddle.GetComponent<BallSplitter>();
         splitter.ball.Split();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections;
 
 public class BrickHit : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class BrickHit : MonoBehaviour
 
     int health;
     new SpriteRenderer renderer;
+
+    public AudioClip hit1Clip;
+    public AudioClip hit2Clip;
+    public AudioClip dieClip;
 
     public static event Action OnDie;
 
@@ -44,6 +49,15 @@ public class BrickHit : MonoBehaviour
 
     void Hit()
     {
+        if (UnityEngine.Random.value >= 0.5)
+        {
+            Sounds.PlayAudio(hit1Clip);
+        }
+        else
+        {
+            Sounds.PlayAudio(hit2Clip);
+        }
+
         health -= 1;
         score.addValue(10);
         if (health <= 0)
@@ -57,6 +71,7 @@ public class BrickHit : MonoBehaviour
 
     void Die()
     {
+        Sounds.PlayAudio(dieClip);
         OnDie();
         Destroy(gameObject);
     }

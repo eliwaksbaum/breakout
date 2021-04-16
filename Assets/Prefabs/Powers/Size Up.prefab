@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerSpeed: {fileID: 11400000, guid: 91f14cf185508b04e8a9f892cb53d80d, type: 2}
   serveCall: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}
+  powerUp: {fileID: 8300000, guid: 29411625b6859f7479ca5c253eb26abf, type: 3}
   data: {fileID: 11400000, guid: 0acb05e350a39c04dbb5bafcab693bd3, type: 2}
 --- !u!1001 &2341950321756906068
 PrefabInstance:

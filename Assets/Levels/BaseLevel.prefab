@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1336916048061860331}
-  - component: {fileID: 4087811757028766366}
+  - component: {fileID: 6900350328508895438}
   m_Layer: 0
   m_Name: BaseLevel
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4087811757028766366
+--- !u!114 &6900350328508895438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   win: {fileID: 11400000, guid: 2f127df29469fcf42828c9576a34ed0b, type: 2}
+  levelWinClip: {fileID: 8300000, guid: e2ec48109b2088e4fb1da5d5f4266a91, type: 3}

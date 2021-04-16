@@ -402,6 +402,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 611e2354d4993cf449a7da0aba889423,
         type: 2}
+    - target: {fileID: 8032226536233034977, guid: db356497dd1d3f54eaa346aaddf2f9fb,
+        type: 3}
+      propertyPath: beep
+      value: 
+      objectReference: {fileID: 8300000, guid: d07e1264f43a857498324af17d46668c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db356497dd1d3f54eaa346aaddf2f9fb, type: 3}
 --- !u!1001 &1526400610
@@ -656,6 +661,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

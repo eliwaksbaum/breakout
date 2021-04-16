@@ -16,7 +16,10 @@ public class Paddle : MonoBehaviour
     public GameEvent serveCall;
     public FloatValue speed;
     public Transform spawn;
-    [NonSerialized] public float halfWidth;
+    //[NonSerialized] public float halfWidth;
+    
+    float leftLimit;
+    float rightLimit;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +28,8 @@ public class Paddle : MonoBehaviour
         renderer.sprite = paddleSprite.Value;
         renderer.size = new Vector2(2.3f, renderer.size.y); //2.3 is the middle value in Paddle Sizes!
         collider = GetComponent<Collider2D>();
-        halfWidth = collider.bounds.extents.x;
         stageBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        FindLimits();
         //SetServe();
     }
 
@@ -57,8 +60,15 @@ public class Paddle : MonoBehaviour
         float x = gameObject.transform.position.x;
         float y = gameObject.transform.position.y;
 
-        float clampedX = Mathf.Clamp(x + move * speed.Value, -stageBounds.x + halfWidth, stageBounds.x - halfWidth);
+        float clampedX = Mathf.Clamp(x + move * speed.Value, leftLimit, rightLimit);
         gameObject.transform.position = new Vector3(clampedX, y, 0);
+    }
+
+    public void FindLimits()
+    {
+        float halfWidth = collider.bounds.extents.x;
+        leftLimit = -stageBounds.x + halfWidth;
+        rightLimit = stageBounds.x - halfWidth;
     }
 
     public void SetServe()
