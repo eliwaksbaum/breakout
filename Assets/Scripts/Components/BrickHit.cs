@@ -13,10 +13,6 @@ public class BrickHit : MonoBehaviour
     int health;
     new SpriteRenderer renderer;
 
-    public AudioClip hit1Clip;
-    public AudioClip hit2Clip;
-    public AudioClip dieClip;
-
     public static event Action OnDie;
 
     void Start()
@@ -51,11 +47,11 @@ public class BrickHit : MonoBehaviour
     {
         if (UnityEngine.Random.value >= 0.5)
         {
-            Sounds.PlayAudio(hit1Clip);
+            Sounds.PlayAudio(brickData.hit1Clip);
         }
         else
         {
-            Sounds.PlayAudio(hit2Clip);
+            Sounds.PlayAudio(brickData.hit2Clip);
         }
 
         health -= 1;
@@ -71,7 +67,7 @@ public class BrickHit : MonoBehaviour
 
     void Die()
     {
-        Sounds.PlayAudio(dieClip);
+        Sounds.PlayAudio(brickData.dieClip);
         OnDie();
         Destroy(gameObject);
     }

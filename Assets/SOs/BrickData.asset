@@ -17,4 +17,6 @@ MonoBehaviour:
   - {fileID: -731162151908756296, guid: 6cb29eb83892f6145a809cb254c7b6b1, type: 3}
   - {fileID: 5113495189850202467, guid: 6cb29eb83892f6145a809cb254c7b6b1, type: 3}
   - {fileID: -7109281448097604524, guid: 6cb29eb83892f6145a809cb254c7b6b1, type: 3}
-  Win: {fileID: 11400000, guid: 2f127df29469fcf42828c9576a34ed0b, type: 2}
+  hit1Clip: {fileID: 8300000, guid: 37857eee20068d54db53ccd476781373, type: 3}
+  hit2Clip: {fileID: 8300000, guid: a2658a612ce1bac49bc24574bc15be44, type: 3}
+  dieClip: {fileID: 8300000, guid: 15c93001a12c414418207cfcde1b26e8, type: 3}
