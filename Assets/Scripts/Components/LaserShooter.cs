@@ -10,7 +10,7 @@ public class LaserShooter : MonoBehaviour
     public GameEvent lose;
     public GameEvent serveCall;
 
-    public IEnumerator fireRoutine;
+    IEnumerator currentShootRoutine;
     bool shooting;
 
     public AudioClip pewClip;
@@ -21,12 +21,13 @@ public class LaserShooter : MonoBehaviour
         pewAudio = Sounds.AddAudio(gameObject, pewClip);
     }
 
-    void Start()
+    public void ShootLasers()
     {
-        fireRoutine = ShootLasers();
+        currentShootRoutine = _ShootLasers();
+        StartCoroutine(currentShootRoutine);
     }
 
-    public IEnumerator ShootLasers()
+    public IEnumerator _ShootLasers()
     {
         float elapsed = 0;
         shooting = true;
@@ -49,7 +50,7 @@ public class LaserShooter : MonoBehaviour
     {
         if (shooting)
         {
-            StopCoroutine(fireRoutine);
+            StopCoroutine(currentShootRoutine);
         }
     }
 
