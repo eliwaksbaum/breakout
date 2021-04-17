@@ -9,6 +9,7 @@ public class ScoreText : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<TextMeshPro>();
+        scoreText.text = "Score: " + score.Value.ToString();
     }
 
     void Update()
