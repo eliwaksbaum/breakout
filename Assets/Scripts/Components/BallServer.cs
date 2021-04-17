@@ -15,13 +15,10 @@ public class BallServer : MonoBehaviour
     public GameObject aim;
     float aimZAngle;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
-        //aim = transform.GetChild(0).gameObject;
-        //SetServe();
     }
 
     void Update()
