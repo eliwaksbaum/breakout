@@ -45,7 +45,7 @@ public class SplittedBall : MonoBehaviour
         Copy(240);
     }
 
-    public void Copy(float angle)
+    void Copy(float angle)
     {
         GameObject newBall = Instantiate(gameObject);
         Rigidbody2D rigidbody = newBall.GetComponent<Rigidbody2D>();

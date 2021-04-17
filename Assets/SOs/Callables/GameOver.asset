@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd782efa2fc22ee47a84115efaef75cf, type: 3}
   m_Name: GameOver
   m_EditorClassIdentifier: 
-  gotoHS: {fileID: 11400000, guid: e1e3b44fc461fdb47a19d73c5354b5a1, type: 2}
-  toStart: {fileID: 11400000, guid: a1a3f99cd08f63942965ad4b2beb2bcf, type: 2}
   score: {fileID: 11400000, guid: e6e41ae711510314ba63e3611bcd7e00, type: 2}
-  hsValue: {fileID: 11400000, guid: b584bed55a7c9b74eb09af34a7a87ff3, type: 2}
+  backClip: {fileID: 8300000, guid: c0d340c7d13b5d742afe47b00c7045c1, type: 3}
+  newHSClip: {fileID: 8300000, guid: df86c2c4f77999b49ab4014c15f13abd, type: 3}

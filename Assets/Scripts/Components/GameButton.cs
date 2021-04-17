@@ -8,7 +8,10 @@ public class GameButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        Sounds.PlayAudio(beep);
+        if (beep != null)
+        {
+            Sounds.PlayAudio(beep);
+        }
         foreach (Callable action in ButtonActions)
         {
             action.Call();
