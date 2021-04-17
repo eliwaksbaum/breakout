@@ -7,7 +7,12 @@ public class BallHitSounds : MonoBehaviour
 
     void Awake()
     {
-        hitAudio = Sounds.AddAudio(gameObject, hitClip);
+        hitAudio = GetComponent<AudioSource>();
+
+        if (hitAudio == null)
+        {
+            hitAudio = Sounds.AddAudio(gameObject, hitClip);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

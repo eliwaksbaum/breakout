@@ -10,12 +10,6 @@ public class BallExit : MonoBehaviour
 
     public AudioClip loseLifeClip;
     public AudioClip loseGameClip;
-    AudioSource loseLifeAudio;
-
-    void Awake()
-    {
-        loseLifeAudio = Sounds.AddAudio(gameObject, loseLifeClip);
-    }
 
     void Start()
     {
@@ -27,7 +21,7 @@ public class BallExit : MonoBehaviour
     {
        if(transform.position.y < -stageBounds.y - .5f)
        {
-           loseLifeAudio.Play();
+           Sounds.PlayAudio(loseLifeClip);
            health.addValue(-1);
            if (health.Value <= 0)
            {

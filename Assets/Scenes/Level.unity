@@ -506,22 +506,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -5490446596843052645, guid: 6b07184a9a88df543bfff137aea729f6,
-        type: 3}
-      propertyPath: totalTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -5490446596843052645, guid: 6b07184a9a88df543bfff137aea729f6,
-        type: 3}
-      propertyPath: waitTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -5490446596843052645, guid: 6b07184a9a88df543bfff137aea729f6,
-        type: 3}
-      propertyPath: win
-      value: 
-      objectReference: {fileID: 11400000, guid: 2f127df29469fcf42828c9576a34ed0b,
-        type: 2}
     - target: {fileID: -3193037452611837518, guid: 6b07184a9a88df543bfff137aea729f6,
         type: 3}
       propertyPath: ball
