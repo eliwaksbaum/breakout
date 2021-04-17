@@ -29,8 +29,6 @@ public class SplittedBall : MonoBehaviour
             if (transform.position.y < -stageBounds.y - 1)
             {
                 alives.Remove(this);
-                //Destroy(GetComponent<BallServer>());
-                //Destroy(GetComponent<BallExit>());
                 Destroy(gameObject);
             }
         }
@@ -74,7 +72,6 @@ public class SplittedBall : MonoBehaviour
 
     void LevelOver()
     {
-        //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         if (alives.IndexOf(this) == 0)
         {
             Relinquish();

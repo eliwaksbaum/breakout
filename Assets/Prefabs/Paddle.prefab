@@ -170,10 +170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b9484011d4cf49b325e9366e9f54a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 0
-  waitTime: 0
-  laserPair: {fileID: 2291740902062649116, guid: b639a33d4450e324d91b7cc8fd48e42b,
-    type: 3}
+  totalTime: 5
+  waitTime: 1
+  laser: {fileID: 3988025976632890220, guid: d303d7e4aeb71954c92073aeec90c9a6, type: 3}
+  laserOffset: 0.4
   win: {fileID: 11400000, guid: 2f127df29469fcf42828c9576a34ed0b, type: 2}
   lose: {fileID: 11400000, guid: 34a9f0d486abaf5428d90a099aa04ce5, type: 2}
   serveCall: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}

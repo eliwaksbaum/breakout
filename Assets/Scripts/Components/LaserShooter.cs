@@ -5,7 +5,8 @@ public class LaserShooter : MonoBehaviour
 {
     public float totalTime;
     public float waitTime;
-    public GameObject laserPair;
+    public GameObject laser;
+    public float laserOffset;
     public GameEvent win;
     public GameEvent lose;
     public GameEvent serveCall;
@@ -43,7 +44,8 @@ public class LaserShooter : MonoBehaviour
     void Fire()
     {
         pewAudio.Play();
-        Instantiate(laserPair, transform.position + new Vector3(0, .5f, 0), Quaternion.identity, LevelLoader.CurrentLevel.transform);
+        Instantiate(laser, transform.position + new Vector3(laserOffset, .5f, 0), Quaternion.identity);
+        Instantiate(laser, transform.position + new Vector3(-laserOffset, .5f, 0), Quaternion.identity);
     }
 
     void Stop()
