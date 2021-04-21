@@ -31,6 +31,14 @@ public class BrickHit : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball")
         {
+            if (UnityEngine.Random.value >= 0.5)
+            {
+                Sounds.PlayAudio(brickData.hit1Clip);
+            }
+            else
+            {
+                Sounds.PlayAudio(brickData.hit2Clip);
+            }
             Hit();
         }
     }
@@ -39,21 +47,13 @@ public class BrickHit : MonoBehaviour
     {
         if (collider.tag == "Laser")
         {
+            Sounds.PlayAudio(brickData.laserClip);
             Hit();
         }
     }
 
     void Hit()
     {
-        if (UnityEngine.Random.value >= 0.5)
-        {
-            Sounds.PlayAudio(brickData.hit1Clip);
-        }
-        else
-        {
-            Sounds.PlayAudio(brickData.hit2Clip);
-        }
-
         health -= 1;
         score.addValue(10);
         if (health <= 0)
