@@ -44,8 +44,8 @@ public class LaserShooter : MonoBehaviour
     void Fire()
     {
         pewAudio.Play();
-        Instantiate(laser, transform.position + new Vector3(laserOffset, .5f, 0), Quaternion.identity);
-        Instantiate(laser, transform.position + new Vector3(-laserOffset, .5f, 0), Quaternion.identity);
+        Instantiate(laser, transform.position + new Vector3(laserOffset, .5f, 0), Quaternion.identity, LevelLoader.CurrentLevel.transform);
+        Instantiate(laser, transform.position + new Vector3(-laserOffset, .5f, 0), Quaternion.identity, LevelLoader.CurrentLevel.transform);
     }
 
     void Stop()

@@ -40,18 +40,18 @@ public class Power : MonoBehaviour
 
     protected virtual void DoPower (GameObject paddle) {}
 
-    void GetOut()
-    {
-        Destroy(gameObject);
-    }
+    // void GetOut()
+    // {
+    //     Destroy(gameObject);
+    // }
 
-    void OnEnable()
-    {
-        serveCall.Add(GetOut);
-    }
+    // void OnEnable()
+    // {
+    //     serveCall.Add(GetOut);
+    // }
 
-    void OnDisable()
-    {
-        serveCall.Remove(GetOut);
-    }
+    // void OnDisable()
+    // {
+    //     serveCall.Remove(GetOut);
+    // }
 }

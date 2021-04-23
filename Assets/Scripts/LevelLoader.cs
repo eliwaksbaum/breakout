@@ -3,7 +3,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader : MonoBehaviour
+public class LevelLoader
 {
     static GameObject currentLevel;
     public static GameObject CurrentLevel {get{return currentLevel;}}
@@ -27,7 +27,7 @@ public class LevelLoader : MonoBehaviour
         currentIndex = index;
     }
 
-    public static void SetCurrent(AsyncOperationHandle<GameObject> handle)
+    static void SetCurrent(AsyncOperationHandle<GameObject> handle)
     {
         currentLevel = handle.Result;
     }
@@ -39,6 +39,6 @@ public class LevelLoader : MonoBehaviour
 
     static void Unload()
     {
-        Destroy(currentLevel);
+        MonoBehaviour.Destroy(currentLevel);
     }
 }
