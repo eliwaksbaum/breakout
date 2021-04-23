@@ -55,7 +55,7 @@ public class BrickHit : MonoBehaviour
     void Hit()
     {
         health -= 1;
-        score.addValue(10);
+        score.addValue(brickData.value);
         if (health <= 0)
         {
             Die();

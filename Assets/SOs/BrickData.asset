@@ -17,6 +17,7 @@ MonoBehaviour:
   - {fileID: -731162151908756296, guid: 6cb29eb83892f6145a809cb254c7b6b1, type: 3}
   - {fileID: 5113495189850202467, guid: 6cb29eb83892f6145a809cb254c7b6b1, type: 3}
   - {fileID: -7109281448097604524, guid: 6cb29eb83892f6145a809cb254c7b6b1, type: 3}
+  value: 5
   hit1Clip: {fileID: 8300000, guid: 37857eee20068d54db53ccd476781373, type: 3}
   hit2Clip: {fileID: 8300000, guid: a2658a612ce1bac49bc24574bc15be44, type: 3}
   laserClip: {fileID: 8300000, guid: 7474f4a14e3064442adf95403238c333, type: 3}
