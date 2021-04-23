@@ -176,7 +176,7 @@ MonoBehaviour:
   - {fileID: 3711596839594254673, guid: 2abc29d1963e6124ba6c5cbcc2ebb009, type: 3}
   - {fileID: 2465237714165982922, guid: 1834fbd468b36e34a8dab94c9aa51981, type: 3}
   interval: 2
-  dropChancePerInterval: 0.25
+  dropChancePerInterval: 0.2
   serveCall: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}
   win: {fileID: 11400000, guid: 2f127df29469fcf42828c9576a34ed0b, type: 2}
   lose: {fileID: 11400000, guid: 34a9f0d486abaf5428d90a099aa04ce5, type: 2}
