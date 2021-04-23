@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76dc52de1b6583c4eaa6d678a1c4f39e, type: 3}
-  m_Name: ballAngle
+  m_Name: ballMaxAngle
   m_EditorClassIdentifier: 
-  Value: 60
+  Value: 65
