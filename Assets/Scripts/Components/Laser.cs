@@ -22,7 +22,7 @@ public class Laser : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D collider)
     {
-        if (collider.tag == "Brick")
+        if (collider.tag == "Brick" || collider.tag == "Block")
         {
             Destroy(gameObject);
         }
