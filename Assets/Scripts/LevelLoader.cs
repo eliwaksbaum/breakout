@@ -8,8 +8,9 @@ public class LevelLoader
     static GameObject currentLevel;
     public static GameObject CurrentLevel {get{return currentLevel;}}
     static int currentIndex;
+
     //YOOOOO, NUMBER OF LEVELS HERE
-    static int maxLevel = 4;
+    static int maxLevel = 7;
 
     public static void Load(int index)
     {

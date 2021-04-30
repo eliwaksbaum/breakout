@@ -15,17 +15,17 @@ PrefabInstance:
     - target: {fileID: 4819145235484123276, guid: 64da436408de3894bbe56f69006934b2,
         type: 3}
       propertyPath: m_Name
-      value: GreenBrick
+      value: 1GreenBrick
       objectReference: {fileID: 0}
     - target: {fileID: 4894156075501341549, guid: 64da436408de3894bbe56f69006934b2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.362802
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4894156075501341549, guid: 64da436408de3894bbe56f69006934b2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8269361
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4894156075501341549, guid: 64da436408de3894bbe56f69006934b2,
         type: 3}
