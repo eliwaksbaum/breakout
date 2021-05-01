@@ -12,7 +12,7 @@ public class TextButton : MonoBehaviour
 
     void OnMouseEnter()
     {
-        text.color = new Color(1, 1, .8f, 1);
+        text.color = new Color(1, 1, .6f, 1);
     }
 
     void OnMouseExit()

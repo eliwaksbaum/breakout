@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c6d21eabf7e80489e8bfeeeb6bf14c, type: 3}
   m_Name: paddleSprite
   m_EditorClassIdentifier: 
-  Value: {fileID: -2123816309034449457, guid: fb9c804c0d136b4459ff22182fb31e70, type: 3}
+  Value: {fileID: -2123816309034449457, guid: 88e23aa89a54e044983519cf9fe49536, type: 3}

@@ -11,6 +11,7 @@ public class Paddle : MonoBehaviour
     bool serving;
     public bool Active {get {return movable;}}
 
+    public float sliceAllowance;
     public SpriteValue paddleSprite;
     public GameEvent win;
     public GameEvent loss;
@@ -67,7 +68,7 @@ public class Paddle : MonoBehaviour
 
     public void FindLimits()
     {
-        float halfWidth = collider.bounds.extents.x;
+        float halfWidth = collider.bounds.extents.x + sliceAllowance;
         leftLimit = -stageBounds.x + halfWidth;
         rightLimit = stageBounds.x - halfWidth;
     }
