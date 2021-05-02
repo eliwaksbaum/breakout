@@ -28,7 +28,6 @@ public class SplittedBall : MonoBehaviour
             if (transform.position.y < -stageBounds.y - 1)
             {
                 alives.Remove(this);
-                Debug.Log(alives.Count);
                 Destroy(gameObject);
             }
         }

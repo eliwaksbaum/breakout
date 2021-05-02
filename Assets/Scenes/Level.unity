@@ -171,10 +171,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powers:
+  - {fileID: 2465237714165982922, guid: 1834fbd468b36e34a8dab94c9aa51981, type: 3}
   - {fileID: 2083423378106579165, guid: 01db148f17a0f4849bb4996ab8611c4f, type: 3}
   - {fileID: 162925468231559423, guid: 9b1774d35753584499e54b1e61d3d7e7, type: 3}
   - {fileID: 3711596839594254673, guid: 2abc29d1963e6124ba6c5cbcc2ebb009, type: 3}
-  - {fileID: 2465237714165982922, guid: 1834fbd468b36e34a8dab94c9aa51981, type: 3}
   interval: 2
   dropChancePerInterval: 0.2
   serveCall: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}

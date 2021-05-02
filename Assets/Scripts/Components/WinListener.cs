@@ -22,7 +22,6 @@ public class WinListener : MonoBehaviour
     void CheckWin()
     {
         brickCount -= 1;
-        Debug.Log("brickCount = " + brickCount.ToString());
         if (brickCount == 0 && !done)
         {
             levelWinAudio.Play();

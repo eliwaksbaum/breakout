@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dc52de1b6583c4eaa6d678a1c4f39e, type: 3}
   m_Name: paddleSpeed
   m_EditorClassIdentifier: 
-  Value: 0.106
+  Value: 0.103
