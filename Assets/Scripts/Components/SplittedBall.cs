@@ -14,7 +14,6 @@ public class SplittedBall : MonoBehaviour
 
     void Start()
     {
-        alives.Add(this);
         stageBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
 
@@ -29,6 +28,7 @@ public class SplittedBall : MonoBehaviour
             if (transform.position.y < -stageBounds.y - 1)
             {
                 alives.Remove(this);
+                Debug.Log(alives.Count);
                 Destroy(gameObject);
             }
         }
@@ -39,11 +39,16 @@ public class SplittedBall : MonoBehaviour
         GetComponent<BallServer>().enabled = false;
         GetComponent<BallExit>().enabled = false;
         takeOver = true;
-        Copy(120);
-        Copy(240);
+
+        if (!alives.Contains(this))
+        {
+            alives.Add(this);
+        }
+        alives.Add(Copy(120));
+        alives.Add(Copy(240));
     }
 
-    void Copy(float angle)
+    SplittedBall Copy(float angle)
     {
         GameObject newBall = Instantiate(gameObject);
         Rigidbody2D rigidbody = newBall.GetComponent<Rigidbody2D>();
@@ -52,6 +57,8 @@ public class SplittedBall : MonoBehaviour
         rigidbody.AddForce(GetVelocity(angle));
         newSplit.takeOver = true;
         newSplit.paddle = paddle;
+
+        return newSplit;
     }
 
     Vector2 GetVelocity(float angle)
@@ -68,18 +75,22 @@ public class SplittedBall : MonoBehaviour
         GetComponent<BallExit>().enabled = true;
         paddle.ball = this;
         takeOver = false;
+        alives.Clear();
     }
 
     void LevelOver()
     {
-        if (alives.IndexOf(this) == 0)
+        if (takeOver)
         {
-            Relinquish();
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+            if (alives.IndexOf(this) == 0)
+            {
+                Relinquish();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        } 
     }
 
     void OnEnable()
