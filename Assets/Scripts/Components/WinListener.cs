@@ -4,6 +4,7 @@ public class WinListener : MonoBehaviour
 {
     public GameEvent win;
     int brickCount;
+    bool done;
 
     public AudioClip levelWinClip;
     AudioSource levelWinAudio;
@@ -12,15 +13,21 @@ public class WinListener : MonoBehaviour
     {
         levelWinAudio = Sounds.AddAudio(gameObject, levelWinClip);
     }
+
+    void Start()
+    {
+        brickCount = GetComponentsInChildren<BrickHit>().Length;
+    }
     
     void CheckWin()
     {
-        brickCount = GetComponentsInChildren<BrickHit>().Length - 1;
-        //brickCount -= 1;
-        if (brickCount == 0)
+        brickCount -= 1;
+        Debug.Log("brickCount = " + brickCount.ToString());
+        if (brickCount == 0 && !done)
         {
             levelWinAudio.Play();
             win.Call();
+            done = true;
         }
     }
 

@@ -68,7 +68,10 @@ public class BrickHit : MonoBehaviour
     void Die()
     {
         Sounds.PlayAudio(brickData.dieClip);
-        OnDie();
+        if (OnDie != null)
+        {
+            OnDie();
+        }
         Destroy(gameObject);
     }
 }
