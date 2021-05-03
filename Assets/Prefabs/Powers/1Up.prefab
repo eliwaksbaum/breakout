@@ -1,19 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &4089698199350153630
+--- !u!114 &3869261348269247590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2465237714165982922}
+  m_GameObject: {fileID: 3066832933144766304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be950c3f6cd34d64e86fd4e8f3fe14a3, type: 3}
+  m_Script: {fileID: 11500000, guid: aa999ff2e162c0a449d7a56b1a91059f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: f955ca3a7d0d82b40acd2f151db97d61, type: 2}
---- !u!1001 &2188680481705671747
+  health: {fileID: 11400000, guid: 13ed49c62cf710347add4cd026342c62, type: 2}
+--- !u!1001 &1650038900413431273
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -78,13 +79,13 @@ PrefabInstance:
     - target: {fileID: 4353162174171437705, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_Name
-      value: Triple Ball
+      value: 1Up
       objectReference: {fileID: 0}
     - target: {fileID: 4713216642511068326, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7119271537133046207, guid: 34145b9b3cd976140b06b5eaedcc3d31,
+      objectReference: {fileID: 4694375181825290222, guid: 34145b9b3cd976140b06b5eaedcc3d31,
         type: 3}
     - target: {fileID: 4713216642511068326, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
@@ -94,22 +95,12 @@ PrefabInstance:
     - target: {fileID: 4713216642511068326, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.4083333
+      value: 1.4111111
       objectReference: {fileID: 0}
     - target: {fileID: 4713216642511068326, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.4083333
-      objectReference: {fileID: 0}
-    - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.4083333
       objectReference: {fileID: 0}
     - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
@@ -139,18 +130,43 @@ PrefabInstance:
     - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 1.4083333
+      value: 1.4111111
       objectReference: {fileID: 0}
     - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.4083333
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.4083333
+      objectReference: {fileID: 0}
+    - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
+        type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7344363c9219c224e95c876bcb5782a5, type: 3}
---- !u!1 &2465237714165982922 stripped
+--- !u!1 &3066832933144766304 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4353162174171437705, guid: 7344363c9219c224e95c876bcb5782a5,
     type: 3}
-  m_PrefabInstance: {fileID: 2188680481705671747}
+  m_PrefabInstance: {fileID: 1650038900413431273}
   m_PrefabAsset: {fileID: 0}

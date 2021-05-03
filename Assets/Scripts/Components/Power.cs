@@ -2,9 +2,7 @@
 
 public class Power : MonoBehaviour
 {
-    public FloatValue powerSpeed;
-    public GameEvent serveCall;
-    public AudioClip powerUp;
+    public PowerData data;
 
     Vector3 stageBounds;
     Rigidbody2D rb;
@@ -21,7 +19,7 @@ public class Power : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        rb.MovePosition(rb.position - new Vector2(0, powerSpeed.Value));
+        rb.MovePosition(rb.position - new Vector2(0, data.speed));
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -31,7 +29,7 @@ public class Power : MonoBehaviour
         {
             if (paddle.Active)
             {
-                Sounds.PlayAudio(powerUp);
+                Sounds.PlayAudio(data.powerUpClip);
                 DoPower(collider.gameObject);
                 Destroy(gameObject);
             }
@@ -39,19 +37,4 @@ public class Power : MonoBehaviour
     }
 
     protected virtual void DoPower (GameObject paddle) {}
-
-    // void GetOut()
-    // {
-    //     Destroy(gameObject);
-    // }
-
-    // void OnEnable()
-    // {
-    //     serveCall.Add(GetOut);
-    // }
-
-    // void OnDisable()
-    // {
-    //     serveCall.Remove(GetOut);
-    // }
 }

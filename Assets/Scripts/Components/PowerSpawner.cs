@@ -3,7 +3,8 @@ using System.Collections;
 
 public class PowerSpawner : MonoBehaviour
 {
-    public GameObject[] powers;
+    public PowerChance[] powers;
+    public System.ValueTuple<float> tuple;
     public float interval;
     public float dropChancePerInterval;
     public GameEvent serveCall;
@@ -20,7 +21,7 @@ public class PowerSpawner : MonoBehaviour
     {
         coroutine = RollForSpawn();
         stageBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        Vector3 extents = powers[0].GetComponent<SpriteRenderer>().bounds.extents;
+        Vector3 extents = powers[0].power.GetComponent<SpriteRenderer>().bounds.extents;
         spawnBounds = stageBounds.x - extents.x;
         spawnHeight = stageBounds.y + extents.y;
     }
@@ -41,7 +42,7 @@ public class PowerSpawner : MonoBehaviour
     {
         int powerIndex = Random.Range(0, powers.Length);
         float x = Random.Range(-spawnBounds, spawnBounds);
-        Instantiate(powers[powerIndex], new Vector3(x, spawnHeight, 0), Quaternion.identity, LevelLoader.CurrentLevel.transform);
+        Instantiate(powers[powerIndex].power, new Vector3(x, spawnHeight, 0), Quaternion.identity, LevelLoader.CurrentLevel.transform);
     }
 
     void Update()

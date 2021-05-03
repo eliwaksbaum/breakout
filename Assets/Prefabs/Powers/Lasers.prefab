@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05966f6bf218544b861ea6f247c0272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerSpeed: {fileID: 11400000, guid: 91f14cf185508b04e8a9f892cb53d80d, type: 2}
-  serveCall: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}
-  powerUp: {fileID: 8300000, guid: 29411625b6859f7479ca5c253eb26abf, type: 3}
+  data: {fileID: 11400000, guid: f955ca3a7d0d82b40acd2f151db97d61, type: 2}
 --- !u!1001 &1147208750694513624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25,17 +23,17 @@ PrefabInstance:
     - target: {fileID: 263655978564480160, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.9928436
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 263655978564480160, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.42437768
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 263655978564480160, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.480658
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 263655978564480160, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
@@ -131,7 +129,7 @@ PrefabInstance:
     - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.4083333
+      value: 1.4111111
       objectReference: {fileID: 0}
     - target: {fileID: 5203876186688507672, guid: 7344363c9219c224e95c876bcb5782a5,
         type: 3}
