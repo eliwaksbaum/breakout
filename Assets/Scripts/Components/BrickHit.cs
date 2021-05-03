@@ -11,6 +11,7 @@ public class BrickHit : MonoBehaviour
     public IntValue score;
 
     int health;
+    bool alreadyDead;
     new SpriteRenderer renderer;
 
     public static event Action OnDie;
@@ -54,15 +55,19 @@ public class BrickHit : MonoBehaviour
 
     void Hit()
     {
-        health -= 1;
-        score.addValue(brickData.value);
-        if (health <= 0)
+        if (!alreadyDead)
         {
-            Die();
-            return;
-        }
-        brickColor -= 1;
-        SetSprite();
+            health -= 1;
+            score.addValue(brickData.value);
+            if (health <= 0)
+            {
+                alreadyDead = true;
+                Die();
+                return;
+            }
+            brickColor -= 1;
+            SetSprite();
+        } 
     }
 
     void Die()
