@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -296334791
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2123816309034449457, guid: 88e23aa89a54e044983519cf9fe49536,
     type: 3}
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614af1882926e4e4281f65e816e33a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sliceAllowance: 0
   paddleSprite: {fileID: 11400000, guid: e1339ded0f1cbac4da4966589cb21ea8, type: 2}
   win: {fileID: 11400000, guid: 2f127df29469fcf42828c9576a34ed0b, type: 2}
   loss: {fileID: 11400000, guid: 34a9f0d486abaf5428d90a099aa04ce5, type: 2}
