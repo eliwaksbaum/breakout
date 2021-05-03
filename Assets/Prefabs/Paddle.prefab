@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -296334791
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2123816309034449457, guid: 88e23aa89a54e044983519cf9fe49536,
     type: 3}
@@ -174,7 +174,7 @@ MonoBehaviour:
   totalTime: 5
   waitTime: 1
   laser: {fileID: 3988025976632890220, guid: d303d7e4aeb71954c92073aeec90c9a6, type: 3}
-  laserOffset: 0.4
+  laserOffset: {x: 0.45, y: 0.8}
   win: {fileID: 11400000, guid: 2f127df29469fcf42828c9576a34ed0b, type: 2}
   lose: {fileID: 11400000, guid: 34a9f0d486abaf5428d90a099aa04ce5, type: 2}
   serveCall: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}
