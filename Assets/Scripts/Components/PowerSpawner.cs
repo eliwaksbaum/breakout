@@ -1,10 +1,10 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
 public class PowerSpawner : MonoBehaviour
 {
     public PowerChance[] powers;
-    public System.ValueTuple<float> tuple;
     public float interval;
     public float dropChancePerInterval;
     public GameEvent serveCall;
@@ -17,6 +17,8 @@ public class PowerSpawner : MonoBehaviour
     float spawnBounds;
     float spawnHeight;
 
+    Tuple<float, float>[] thresholds;
+
     void Start()
     {
         coroutine = RollForSpawn();
@@ -24,13 +26,14 @@ public class PowerSpawner : MonoBehaviour
         Vector3 extents = powers[0].power.GetComponent<SpriteRenderer>().bounds.extents;
         spawnBounds = stageBounds.x - extents.x;
         spawnHeight = stageBounds.y + extents.y;
+        thresholds = DivvySpinner();
     }
 
     IEnumerator RollForSpawn()
     {
         while(rolling)
         {
-            if (Random.value < dropChancePerInterval)
+            if (UnityEngine.Random.value < dropChancePerInterval)
             {
                 Spawn();
             }
@@ -38,10 +41,40 @@ public class PowerSpawner : MonoBehaviour
         }
     }
 
+    Tuple<float, float>[] DivvySpinner()
+    {
+        Tuple<float, float>[] pairs = new Tuple<float, float>[powers.Length];
+        
+        float rolling = 0;
+        for (int i = 0; i < powers.Length; i++)
+        {
+            float end = rolling + powers[i].relativeChance;
+            pairs[i] = new Tuple<float, float>(rolling, end);
+            rolling += powers[i].relativeChance;
+            Debug.Log(pairs[i]);
+        }
+        return pairs;
+    }
+
+    int RandomIndex()
+    {
+        float spin = UnityEngine.Random.value;
+        for (int i = 0; i < thresholds.Length; i++)
+        {
+            if (thresholds[i].Item1 <= spin && spin <= thresholds[i].Item2)
+            {
+                return i;
+            }
+        }
+        return 0;
+    }
+
     void Spawn()
     {
-        int powerIndex = Random.Range(0, powers.Length);
-        float x = Random.Range(-spawnBounds, spawnBounds);
+        int powerIndex = RandomIndex();
+        Debug.Log(powerIndex);
+
+        float x = UnityEngine.Random.Range(-spawnBounds, spawnBounds);
         Instantiate(powers[powerIndex].power, new Vector3(x, spawnHeight, 0), Quaternion.identity, LevelLoader.CurrentLevel.transform);
     }
 
