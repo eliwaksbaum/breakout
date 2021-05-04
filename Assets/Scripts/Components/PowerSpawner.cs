@@ -51,7 +51,6 @@ public class PowerSpawner : MonoBehaviour
             float end = rolling + powers[i].relativeChance;
             pairs[i] = new Tuple<float, float>(rolling, end);
             rolling += powers[i].relativeChance;
-            Debug.Log(pairs[i]);
         }
         return pairs;
     }
@@ -72,7 +71,6 @@ public class PowerSpawner : MonoBehaviour
     void Spawn()
     {
         int powerIndex = RandomIndex();
-        Debug.Log(powerIndex);
 
         float x = UnityEngine.Random.Range(-spawnBounds, spawnBounds);
         Instantiate(powers[powerIndex].power, new Vector3(x, spawnHeight, 0), Quaternion.identity, LevelLoader.CurrentLevel.transform);
