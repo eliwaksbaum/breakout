@@ -10,7 +10,7 @@ public class LevelLoader
     static int currentIndex;
 
     //YOOOOO, NUMBER OF LEVELS HERE
-    static int maxLevel = 7;
+    static int maxLevel = 10;
 
     public static void Load(int index)
     {

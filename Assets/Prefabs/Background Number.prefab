@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4939480478001584089}
   - component: {fileID: 3859028869714649464}
   - component: {fileID: 5243341950676462783}
-  - component: {fileID: 8922390540991680081}
   - component: {fileID: 5988760632847693485}
   m_Layer: 0
   m_Name: Background Number
@@ -208,20 +207,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
---- !u!114 &8922390540991680081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518348562950980130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 2
-  m_VerticalFit: 2
 --- !u!114 &5988760632847693485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,4 +219,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7363d907777d58d448dfa5c95a13bbc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serve: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}
