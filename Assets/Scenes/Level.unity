@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serve: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}
+  Load0: {fileID: 11400000, guid: bc6b2cf7140aeca40b9cda5342ef1fca, type: 2}
   health: {fileID: 11400000, guid: 13ed49c62cf710347add4cd026342c62, type: 2}
   score: {fileID: 11400000, guid: e6e41ae711510314ba63e3611bcd7e00, type: 2}
   paddleSizes: {fileID: 11400000, guid: 0acb05e350a39c04dbb5bafcab693bd3, type: 2}
