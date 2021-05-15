@@ -7,6 +7,5 @@ public class BrickData : ScriptableObject
     public int value;
     public AudioClip hit1Clip;
     public AudioClip hit2Clip;
-    public AudioClip laserClip;
     public AudioClip dieClip;
 }

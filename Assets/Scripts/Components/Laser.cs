@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
+    public AudioClip laserhit;
     new Rigidbody2D rigidbody;
     Vector3 stageBounds;
 
@@ -24,6 +25,7 @@ public class Laser : MonoBehaviour
     {
         if (collider.tag == "Brick" || collider.tag == "Block")
         {
+            Sounds.PlayAudio(laserhit);
             Destroy(gameObject);
         }
     }
