@@ -172,15 +172,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powers:
   - power: {fileID: 3066832933144766304, guid: ecf6d42f6120b6540a2e2c57ac85e82c, type: 3}
-    relativeChance: 0.023
+    relativeChance: 0.08
   - power: {fileID: 3711596839594254673, guid: 2abc29d1963e6124ba6c5cbcc2ebb009, type: 3}
-    relativeChance: 0.22
+    relativeChance: 0.23
   - power: {fileID: 162925468231559423, guid: 9b1774d35753584499e54b1e61d3d7e7, type: 3}
-    relativeChance: 0.26
+    relativeChance: 0.23
   - power: {fileID: 2083423378106579165, guid: 01db148f17a0f4849bb4996ab8611c4f, type: 3}
-    relativeChance: 0.26
+    relativeChance: 0.23
   - power: {fileID: 2465237714165982922, guid: 1834fbd468b36e34a8dab94c9aa51981, type: 3}
-    relativeChance: 0.237
+    relativeChance: 0.23
   interval: 2
   dropChancePerInterval: 0.15
   serveCall: {fileID: 11400000, guid: 3132a68bb974531449693da2f0905ff5, type: 2}
@@ -261,7 +261,7 @@ PrefabInstance:
     - target: {fileID: 8135077565851276376, guid: 6e41e53a2c0c82b4784bd54363c977fa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8135077565851276376, guid: 6e41e53a2c0c82b4784bd54363c977fa,
         type: 3}
@@ -485,7 +485,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -565,7 +565,7 @@ PrefabInstance:
     - target: {fileID: 6655750006419460260, guid: 2ea8272c01b13d74194b5af1e2cbe06e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6655750006419460260, guid: 2ea8272c01b13d74194b5af1e2cbe06e,
         type: 3}
