@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4651090aa3a015419f5e4d81755a6eb, type: 3}
   m_Name: PowerData
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.09
   powerUpClip: {fileID: 8300000, guid: 29411625b6859f7479ca5c253eb26abf, type: 3}
