@@ -16,15 +16,15 @@ MonoBehaviour:
   - threshold: 0
     sprite: {fileID: -2123816309034449457, guid: 88e23aa89a54e044983519cf9fe49536,
       type: 3}
-  - threshold: 100
+  - threshold: 250
     sprite: {fileID: -3893191228794215368, guid: 88e23aa89a54e044983519cf9fe49536,
       type: 3}
-  - threshold: 300
+  - threshold: 750
     sprite: {fileID: -2908715997794351946, guid: 88e23aa89a54e044983519cf9fe49536,
       type: 3}
-  - threshold: 600
+  - threshold: 1200
     sprite: {fileID: -3384148642245706772, guid: 88e23aa89a54e044983519cf9fe49536,
       type: 3}
-  - threshold: 1000
+  - threshold: 2500
     sprite: {fileID: -901936806110924720, guid: 88e23aa89a54e044983519cf9fe49536,
       type: 3}
