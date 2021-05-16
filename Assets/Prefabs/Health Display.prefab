@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99e4c81a3527c3468d7ec753f8fb22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 11400000, guid: 13ed49c62cf710347add4cd026342c62, type: 2}
+  publicHealth: {fileID: 11400000, guid: 13ed49c62cf710347add4cd026342c62, type: 2}
   hearts:
   - {fileID: 6939550848964592624}
   - {fileID: 4100957805312714970}

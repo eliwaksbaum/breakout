@@ -11,13 +11,4 @@ public class BoolValue : ScriptableObject
     {
         value = set;
     }
-
-    // public void ToggleValue()
-    // {
-    //     value = !value;
-    //     if (ChangeEvent != null)
-    //     {
-    //         ChangeEvent(value);
-    //     }
-    // }
 }

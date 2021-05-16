@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class HealthDisplay : MonoBehaviour
 {
-    public IntValue health;
+    public IntValue publicHealth;
     public GameObject[] hearts;
+    int localHealth;
 
-    void SetHearts()
+    void SetHearts(int health)
     {
         for (int i = 0; i < 3; i++)
         {
-            if (i + 1 > health.Value)
+            if (i + 1 > health)
             {
                 hearts[i].SetActive(false);
             }
@@ -18,15 +19,14 @@ public class HealthDisplay : MonoBehaviour
                 hearts[i].SetActive(true);
             }
         }
+        localHealth = health;
     }
 
-    void OnEnable()
+    void Update()
     {
-        health.ChangeEvent += SetHearts;
-    }
-
-    void OnDisable()
-    {
-        health.ChangeEvent -= SetHearts;
+        if (localHealth != publicHealth.Value)
+        {
+            SetHearts(publicHealth.Value);
+        }
     }
 }

@@ -5,8 +5,6 @@ public class IntValue : ScriptableObject
 {
     [SerializeField] private int value;
 
-    public event Action ChangeEvent;
-
     public int Value {get{return value;}}
 
     public void setValue(int set)
@@ -17,9 +15,5 @@ public class IntValue : ScriptableObject
     public void addValue(int add)
     {
         value += add;
-        if (ChangeEvent != null)
-        {
-            ChangeEvent();
-        }
     }
 }
