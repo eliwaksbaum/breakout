@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveDataHandler {
     //NUMBER OF SCORES TO DISPLAY
     static int length = 5;
 
-    static string scorePath = Application.dataPath + "/HighScores.json";
-    static string paddlePath = Application.dataPath + "/PaddleProgress.json";
+    static string scorePath = Application.persistentDataPath + "/breakout.dat";
 
     public static bool IsNewRecord(int score)
     {
@@ -38,35 +37,25 @@ public class SaveDataHandler {
 
     static void WriteScores(List<HighScore> scores)
     {
-        StreamWriter sw;
-        if (!File.Exists(scorePath))
-        {
-            sw = File.CreateText(scorePath);
-        }
-        else
-        {
-            sw = new StreamWriter(scorePath);
-        }
-        foreach (HighScore score in scores)
-        {
-            string json = JsonUtility.ToJson(score);
-            sw.WriteLine(json);
-        }
-        sw.Close();
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream saveFile;
+        saveFile = File.Open(scorePath, FileMode.OpenOrCreate);
+        bf.Serialize(saveFile, scores);
+        saveFile.Close();
     }
 
-    public static int[] ReadScores()
+    static int[] ReadScores()
     {
-        StreamReader sr = new StreamReader(scorePath);
-        int[] oldScores = new int[5];
-        int i = 0;
-        string line;
-        while((line = sr.ReadLine()) != null)
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream saveFile = File.Open(scorePath, FileMode.Open);
+        List<HighScore> highScores = (List<HighScore>)bf.Deserialize(saveFile);
+        saveFile.Close();
+
+        int[] oldScores = new int[length];
+        for (int i = 0; i < highScores.Count; i++)
         {
-            oldScores[i] = JsonUtility.FromJson<HighScore>(line).score;
-            i += 1;
+            oldScores[i] = highScores[i].score;
         }
-        sr.Close();
         return oldScores;
     }
 
@@ -76,14 +65,13 @@ public class SaveDataHandler {
         {
             return new List<HighScore>();
         }
-        StreamReader sr = new StreamReader(scorePath);
-        List<HighScore> scores = new List<HighScore>();
-        string line;
-        while((line = sr.ReadLine()) != null)
+        else
         {
-            scores.Add(JsonUtility.FromJson<HighScore>(line));
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream saveFile = File.Open(scorePath, FileMode.Open);
+            List<HighScore> scores = (List<HighScore>)bf.Deserialize(saveFile);
+            saveFile.Close();
+            return scores;
         }
-        sr.Close();
-        return scores;
     }
 }
