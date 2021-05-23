@@ -15,17 +15,12 @@ public class NameInput : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && nameField.text.Length > 0)
         {
-            if (nameField.text.Length > 0)
-            {
-                SaveDataHandler.AddNewScore(score.Value, nameField.text.ToUpper());
-                SceneManager.LoadScene("HighScores");
-            }
-            else
-            {
-                nameField.ActivateInputField();
-            }
+            SaveDataHandler.AddNewScore(score.Value, nameField.text.ToUpper());
+            SceneManager.LoadScene("HighScores");
         }
+
+        nameField.ActivateInputField();
     }
 }
