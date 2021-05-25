@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1962641d06daf1d46b8d60462fae132c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tolerance: 0.2
+  tolerance: 0.5
