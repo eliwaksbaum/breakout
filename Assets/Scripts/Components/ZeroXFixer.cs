@@ -10,9 +10,6 @@ public class ZeroXFixer : MonoBehaviour
         {
             Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
 
-            Debug.Log(rb.velocity.x);
-            Debug.Log(rb.velocity.y);
-
             if (Mathf.Abs(rb.velocity.x) < tolerance && rb.velocity.y > 0) //Apparently the ball bounces, and
                                                                             //changes directions before this is called
             {
