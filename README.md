@@ -1,4 +1,4 @@
 # breakout
 Breakout built in Unity.
 
-[Play](eli.waksbaum.com/projects/breakout) | [Read](eli.waksbaum.com/projects/breakout/notes)
+[Play](https://eli.waksbaum.com/projects/breakout) | [Read](https://eli.waksbaum.com/projects/breakout/notes)
